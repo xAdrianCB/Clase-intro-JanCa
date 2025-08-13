@@ -93,9 +93,9 @@ def intercambiar(n1, n2):
         n2 = n2//10
         exp += 1
     return res
-#
-#
-#
+#E:
+#S:
+#R:
 def ulam(n):
     while n>1:
         if n%2 == 0:
@@ -113,10 +113,9 @@ def impares(num):
         if (num%10)%2 != 0:
             res += num%10*(10**exp)
             exp += 1
-            num //= 10
-        else:
-            num //= 10
+        num //= 10      
     return res
             
     
+
 
