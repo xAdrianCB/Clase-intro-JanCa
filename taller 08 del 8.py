@@ -93,4 +93,30 @@ def intercambiar(n1, n2):
         n2 = n2//10
         exp += 1
     return res
+#
+#
+#
+def ulam(n):
+    while n>1:
+        if n%2 == 0:
+            n//= 2
+        else:
+            n=(n*3)+1
+    return n
+#E: un numero
+#S: los digitos impares del numero
+#R:
+def impares(num):
+    res = 0
+    exp = 0
+    while num>0:
+        if (num%10)%2 != 0:
+            res += num%10*(10**exp)
+            exp += 1
+            num //= 10
+        else:
+            num //= 10
+    return res
+            
+    
 
