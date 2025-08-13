@@ -64,4 +64,33 @@ def palindromo(num):
         else:
             return False
     return True 
-    
+#
+#
+#
+def primo(num):
+    if num < 0:
+        return False
+    else:
+        div = 0
+        while div<num:
+            if num%div == 0:
+                return False
+            else:
+                div += 1
+        return True
+
+def intercambiar(n1, n2):
+    res = 0
+    exp = 0
+    while n1>0:
+        dig1 = n1%10
+        dig2 = n2%10
+        if primo(dig1+dig2):
+            res += dig2*(10**exp)
+        else:
+            res += dig1*(10**exp)
+        n1 = n1//10
+        n2 = n2//10
+        exp += 1
+    return res
+
